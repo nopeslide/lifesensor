@@ -5,6 +5,8 @@ This directory contains Dockerfiles for the containers used in this project.
 ## Images
 - [base](./base/README.md)
   - base image for all other images
+- [idf](./idf/README.md)
+  - idf framework for the esp32 firmware
 
 ## Building all images
 1. run `make build`
