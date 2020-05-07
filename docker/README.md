@@ -7,6 +7,8 @@ This directory contains Dockerfiles for the containers used in this project.
   - base image for all other images
 - [idf](./idf/README.md)
   - idf framework for the esp32 firmware
+- [qemu](./qemu/README.md)
+  - qemu for the xtensa architecture to simulate esp32
 
 ## Building all images
 1. run `make build`
