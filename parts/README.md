@@ -7,6 +7,20 @@
   - interconnect between pcbs
 
 ---
+## Makefile
+<!-- LIST OF MANDATORY MAKEFILE TARGETS -->
+- `make help`
+  - show Makefile options
+- `make all`
+  - build all versions of all parts
+- `make build`
+  - build all versions of all parts
+- `make clean`
+  - clean all versions of all parts
+- `make distclean`
+  - distclean all versions of all parts
+
+---
 ## Adding new parts
 - If you want to add a new part,
 please copy the [*template part*](./.template/) and modify your copy.
