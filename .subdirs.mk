@@ -4,8 +4,8 @@ VARIABLE += SUBDIRS
 HELP_SUBDIRS := directories to run make in
 SUBDIRS := $(shell dirname $(wildcard */Makefile) 2>/dev/null)
 
-TARGET_default := all
-TARGET_all     := build
+TARGET_default ?= all
+TARGET_all     ?= build
 
 define TARGET_TEMPLATE
 .phony: $1-$2
