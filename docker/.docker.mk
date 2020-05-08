@@ -1,8 +1,10 @@
+HELP := Build docker image & run docker container
+
 ifndef NAME
 $(error No image name specified! (NAME))
 endif
 
-VARIABLE_TOPICS += DOCKER
+VARIABLE_TOPIC        += DOCKER
 VARIABLE_TOPIC_DOCKER := DOCKER IMAGE OPTIONS
 
 DOCKER       += IMAGE
@@ -23,10 +25,10 @@ ifndef VERSION
 VERSION      := latest
 endif
 
-VARIABLE_TOPICS += ARGS
+VARIABLE_TOPIC      += ARGS
 VARIABLE_TOPIC_ARGS := DOCKER IMAGE ARGUMENTS
 
-VARIABLE_TOPICS += DOCKER_BUILD
+VARIABLE_TOPIC              += DOCKER_BUILD
 VARIABLE_TOPIC_DOCKER_BUILD := DOCKER BUILD OPTIONS
 
 DOCKER_BUILD += TAG
@@ -35,7 +37,7 @@ HELP_TAG     := additional version tag to set when building image
 DOCKER_BUILD += BUILD
 HELP_BUILD   := additional docker build options
 
-VARIABLE_TOPICS += DOCKER_RUN
+VARIABLE_TOPIC            += DOCKER_RUN
 VARIABLE_TOPIC_DOCKER_RUN := DOCKER RUN OPTIONS
 
 DOCKER_RUN   += RUN
@@ -59,22 +61,21 @@ endif
 DOCKER_RUN   += MOUNT
 HELP_MOUNT   := what directory to mount into the container
 
-.phony: from
-TARGET    += from
-ALL       += from
-DEFAULT   += from
-HELP_from := build image dependency
-from:
+TARGET_default := all
+TARGET_all     := build run
+
+.phony: build-from
+TARGET_build    += build-from
+HELP_build-from := build image dependency
+build-from:
 ifdef FROM
 	make -C ../$(FROM) build
 endif
 
-.phony: build
-TARGET     += build
-ALL        += build
-DEFAULT    += build
-HELP_build := build docker image '$(IMAGE):$(VERSION)'
-build: from
+.phony: build-image
+TARGET_build     += build-image
+HELP_build-image := build docker image '$(IMAGE):$(VERSION)'
+build-image: build-from
 	docker build \
 		$(foreach ARG,$(ARGS),--build-arg=$(ARG)=$($(ARG)) ) \
 		$(BUILD) \
@@ -86,8 +87,6 @@ endif
 
 .phony: run
 TARGET   += run
-ALL      += run
-DEFAULT  += run
 HELP_run := run docker image '$(IMAGE):$(VERSION)'
 run: build
 	docker run \
@@ -103,7 +102,7 @@ run: build
 		$(EXEC)
 
 .phony: clean-volume
-CLEAN             += clean-volume
+TARGET_clean      += clean-volume
 HELP_clean-volume := delete docker volumes
 clean-volume:
 	$(foreach \
@@ -113,7 +112,7 @@ clean-volume:
 	)
 
 .phony: distclean-image
-DISTCLEAN            += distclean-image
+TARGET_distclean     += distclean-image
 HELP_distclean-image := delete docker image
 distclean-image:
 	docker image rm -f $(IMAGE):$(VERSION)
