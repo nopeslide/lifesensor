@@ -4,11 +4,11 @@ This directory contains Dockerfiles for the containers used in this project.
 
 ---
 ## List of images
-- [base](./base/README.md)
+- [base](./base/)
   - base image for all other images
-- [idf](./idf/README.md)
+- [idf](./idf/)
   - idf framework for the esp32 firmware
-- [qemu](./qemu/README.md)
+- [qemu](./qemu/)
   - qemu for the xtensa architecture to simulate esp32
 
 ---
@@ -45,7 +45,7 @@ or
 ---
 ## Adding new images
 - If you want to add a new image,
-please copy and modify the [Template](./.template/README.md)
+please copy and modify the [Template](./.template/)
 
 ---
 ## Structure
@@ -64,8 +64,8 @@ please copy and modify the [Template](./.template/README.md)
 ```
 
 - *Docker images* of the LifeSensor project should have a dedicated directory here.
-- *Docker images* can be based on each other (see [base](./base/README.md) image).
+- *Docker images* can be based on each other (see [base](./base/) image).
 - *Docker images* may compete for the same functionality.
-  - Different [*parts*](../parts/README.md) may use different *docker images*
-- *Docker images* should follow the directory scheme defined by the [*template image*](./.template/README.md)
+  - Different [*parts*](../parts/) may use different *docker images*
+- *Docker images* should follow the directory scheme defined by the [*template image*](./.template/)
   - *Docker images* may contain any additional files & directories

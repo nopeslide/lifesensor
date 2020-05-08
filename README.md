@@ -2,10 +2,10 @@
 
 The [*LifeSensor*](lifesensor.org) project is an open-source, modular, low-cost bio sensing platform.
 
-- This project contains collection of [*parts*](./parts/README.md).
-  - [*Parts*](./parts/README.md) are usually physical components
-- [*Products*](./products/README.md) are build out of [*parts*](./parts/README.md).
-  - [*Products*](./products/README.md) are supported [*LifeSensor*](lifesensor.org) devices.
+- This project contains collection of [*parts*](./parts/).
+  - [*Parts*](./parts/) are usually physical components
+- [*Products*](./products/) are build out of [*parts*](./parts/).
+  - [*Products*](./products/) are supported [*LifeSensor*](lifesensor.org) devices.
 
 ## Contributing
 Please see

@@ -1,15 +1,15 @@
 # LifeSensor parts
-*Parts* are components which are used as building blocks of [*products*](../products/README.md).
+*Parts* are components which are used as building blocks of [*products*](../products/).
 
 ---
 ## List of parts
-- [interconnect](./interconnect/README.md)
+- [interconnect](./interconnect/)
   - interconnect between pcbs
 
 ---
 ## Adding new parts
 - If you want to add a new part,
-please copy and modify the [*template part*](./.template/README.md)
+please copy and modify the [*template part*](./.template/)
 
 ---
 ## Structure
@@ -71,8 +71,8 @@ please copy and modify the [*template part*](./.template/README.md)
 - *Parts* of the LifeSensor project should have a dedicated directory here.
 - *Parts* should not include other *parts*, instead they should refer to other *parts*.
 - *Parts* may compete for the same functionality.
-  - Different [*products*](../products/README.md) may choose different *parts*
-- *Parts* should follow the directory scheme defined by the [*template part*](./.template/README.md)
+  - Different [*products*](../products/) may choose different *parts*
+- *Parts* should follow the directory scheme defined by the [*template part*](./.template/)
   - *Parent directories* may contain any structure
   - Optional *parent directories* can be removed
 - Only non-breaking changes may be introduced as patch for a *part*
@@ -89,4 +89,4 @@ please copy and modify the [*template part*](./.template/README.md)
   - *Parts* may be outsourced in the future and reintegrated vai git submodules
 - Why version directories inside git?
   - Git can deduplicate files therefore the internal structure isn't bloated
-  - This repo aims to support multiple [*products*](../products/README.md) at once which may require different versions of *parts*
+  - This repo aims to support multiple [*products*](../products/) at once which may require different versions of *parts*

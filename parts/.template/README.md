@@ -36,5 +36,5 @@ This template should be used to create a new part.
 <!-- PLEASE LIST ALL VERSIONS OF YOUR PART    -->
 <!-- INCLUDING A SHORT DESCRIPTION OF CHANGES -->
 <!-- LATEST VERSION SHOULD BE ON TOP!         -->
-- [1](./1/README.md)
+- [1](./1/)
   - initial version
