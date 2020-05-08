@@ -1,4 +1,6 @@
-# LifeSensor
+# LifeSensor Project
+
+![lifesensor_logo.png](./docs/lifesensor_logo.png)
 
 The [*LifeSensor*](lifesensor.org) project is an open-source, modular, low-cost bio sensing platform.
 
