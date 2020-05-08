@@ -2,11 +2,11 @@
 
 ![lifesensor_logo.png](./docs/lifesensor_logo.png)
 
-The [*LifeSensor*](lifesensor.org) project is an open-source, modular, low-cost bio sensing platform.
+The [*LifeSensor*](https://lifesensor.org) project is an open-source, modular, low-cost bio sensing platform.
 
 - This project is a collection of [*parts*](./parts/) and [*products*](./products/).
 - [*Parts*](./parts/) are components that provide a set of features.
-- [*Products*](./products/) are supported [*LifeSensor*](lifesensor.org) devices consisting of [*parts*](./parts/).
+- [*Products*](./products/) are supported [*LifeSensor*](https://lifesensor.org) devices consisting of [*parts*](./parts/).
 - [*Parts*](./parts/) are subjects to requirements and constraints imposed by other [*parts*](./parts/) & [*products*](./products/)
 
 ## Contributing
