@@ -17,7 +17,7 @@ This template should be used to create a new part.
 
 ---
 ## Makefile
-<!-- LIST OF MANDATORY MAKEFILE TARGETS -->
+<!-- LIST OF MAKEFILE TARGETS -->
 - `make help`
   - show Makefile options
 - `make all`

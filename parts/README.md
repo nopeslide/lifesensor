@@ -8,7 +8,7 @@
 
 ---
 ## Makefile
-<!-- LIST OF MANDATORY MAKEFILE TARGETS -->
+<!-- LIST OF MAKEFILE TARGETS -->
 - `make help`
   - show Makefile options
 - `make all`

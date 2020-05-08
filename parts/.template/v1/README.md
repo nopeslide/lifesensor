@@ -2,7 +2,7 @@
 # Part template (version v1)
 
 <!-- SHORT DESCRIPTION -->
-This template should be used to create a new part.
+This template should be used to create a new part version.
 1. Edit this README
    - Change title & version!
 2. Delete unneeded directories
@@ -16,7 +16,7 @@ This template should be used to create a new part.
 
 ---
 ## Makefile
-<!-- LIST OF MANDATORY MAKEFILE TARGETS -->
+<!-- LIST OF MAKEFILE TARGETS -->
 - `make help`
   - show Makefile options
 - `make all`
@@ -29,10 +29,6 @@ This template should be used to create a new part.
   - clean all versions
 - `make distclean`
   - distclean all version
----
-<!-- LIST OF CUSTOM MAKEFILE TARGETS -->
-- `make foo`
-  - bar
 
 ----
 ## [Code](./code/)
