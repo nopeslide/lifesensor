@@ -9,7 +9,7 @@
 ---
 ## Adding new parts
 - If you want to add a new part,
-please copy and modify the [*template part*](./.template/)
+please copy the [*template part*](./.template/) and modify your copy.
 
 ---
 ## Structure
