@@ -68,6 +68,8 @@ please copy the [*template part*](./.template/) and modify your copy.
 └── ...
 ```
 
+---
+## Rules
 - *Parts* of the LifeSensor project should have a dedicated directory here.
 - *Parts* should not include other *parts*, instead they should refer to other *parts*.
 - *Parts* may compete for the same functionality.
