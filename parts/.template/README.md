@@ -1,7 +1,7 @@
 <!-- Part <TITLE> -->
 # Part template
 
-<!-- SHORT DESCRIPTION OF YOUR PART -->
+<!-- SHORT DESCRIPTION -->
 This template should be used to create a new part.
 1. Copy this template directory
 2. Give your new part a meaningful name.

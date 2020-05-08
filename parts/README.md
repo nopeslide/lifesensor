@@ -15,6 +15,8 @@
   - build all versions of all parts
 - `make build`
   - build all versions of all parts
+- `make test`
+  - test all versions of all parts
 - `make clean`
   - clean all versions of all parts
 - `make distclean`
@@ -105,4 +107,5 @@ please copy the [*template part*](./.template/) and modify your copy.
   - *Parts* may be outsourced in the future and reintegrated vai git submodules
 - Why version directories inside git?
   - Git can deduplicate files therefore the internal structure isn't bloated
+  - *Part versions* are not necessarily incremental changes
   - This repo aims to support multiple [*products*](../products/) at once which may require different versions of *parts*

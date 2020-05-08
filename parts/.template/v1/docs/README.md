@@ -9,6 +9,4 @@ This the document collection of the part template.
 ---
 ## Documents
 <!-- LIST OF DOCUMENTS -->
-- [lifesensor_logo.png](./lifesensor_logo.png)
-  - LifeSensor project logo
-![lifesensor_logo.png](./lifesensor_logo.png)
+- none
