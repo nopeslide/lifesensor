@@ -1,4 +1,4 @@
-# LifeSensor Project
+# LifeSensor Project - health devices for all
 
 ![lifesensor_logo.png](./docs/lifesensor_logo.png)
 
