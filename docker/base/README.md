@@ -1,20 +1,38 @@
+<!-- Docker image <TITLE> -->
 # Docker image base
 
-<!-- SHORT DESCRIPTION OF YOUR DOCKER IMAGE -->
+<!-- SHORT DESCRIPTION  -->
 This is the base image of all other images.
 
 ## Features
-<!-- PLEASE LIST THE FEATURES OF YOUR IMAGE FOR A QUICK REFERENCE -->
+<!-- LIST OF FEATURES -->
 - installs `sudo`
 - creates user `developer`
 - adds `developer` to sudoers
 
-## Arguments
-<!-- PLEASE LIST THE BUILD ARGUMENTS OF YOUR IMAGE FOR A QUICK REFERENCE -->
+---
+## Makefile
+<!-- LIST OF MAKEFILE TARGETS -->
+- `make help`
+  - show Makefile options
+- `make all`
+  - build image & run container
+- `make build`
+  - build image
+- `make run`
+  - run container
+- `make clean`
+  - delete volumes
+- `make distclean`
+  - delete image
+
+---
+## Image arguments
+<!-- LIST OF BUILD ARGUMENTS -->
 - `UID`
   - sets uid of `developer`
 - `GID`
   - sets gid of `developer`
 
-<!-- DO NOT FORGET TO MODIFY DOCKERFILE & MAKEFILE! -->
+---
 See the [Dockerfile](./Dockerfile) or [Makefile](./Makefile) for more information
