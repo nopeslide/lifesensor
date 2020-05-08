@@ -2,7 +2,7 @@
 # Part interconnect documents (version v1)
 
 <!-- SHORT DESCRIPTION -->
-Documents regarding the interconnect.
+This the document collection of the part interconnect.
 
 ---
 ## Documents
