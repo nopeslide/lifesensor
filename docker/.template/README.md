@@ -3,10 +3,13 @@
 
 <!-- SHORT DESCRIPTION -->
 This template should be used to create a new docker image.
-1. Edit this README
+1. Copy this template directory
+2. Give your new image a meaningful name.
+3. Append your new image to the image list in [../README.md](../README.md)
+4. Edit this README
    - Change title!
-2. Edit Dockerfile
-3. Edit Makefile
+5. Edit the [Dockerfile](./Dockerfile)
+6. Edit the [Makefile](./Makefile)
 
 ---
 ## Features
