@@ -1,5 +1,5 @@
 <!-- Part <TITLE> (version <VERSION>) -->
-# Part template (version 1)
+# Part template (version v1)
 
 <!-- SHORT DESCRIPTION -->
 This template should be used to create a new part.

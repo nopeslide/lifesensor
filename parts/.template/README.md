@@ -8,7 +8,7 @@ This template should be used to create a new part.
    - Change title!
 3. Append your new part to the part list in [../README.md](../README.md)
 4. Edit this README
-5. Continue editing in [1/README.md](./1/README.md)
+5. Continue editing in [v1/README.md](./1/README.md)
 
 ---
 ## Features
@@ -36,5 +36,5 @@ This template should be used to create a new part.
 <!-- PLEASE LIST ALL VERSIONS OF YOUR PART    -->
 <!-- INCLUDING A SHORT DESCRIPTION OF CHANGES -->
 <!-- LATEST VERSION SHOULD BE ON TOP!         -->
-- [1](./1/)
+- [v1](./v1/)
   - initial version
