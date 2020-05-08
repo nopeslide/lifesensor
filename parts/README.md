@@ -81,7 +81,7 @@ please copy the [*template part*](./.template/) and modify your copy.
 - *Part versions* denote non-backwards-compatible variants of the same *part*
   - If major implementations change, consider creating a new *part* or *part version*
 - *Part versions* should never denote the state of the *part*
-  - All *parts* should provide their intended functionality
+  - All *part versions* should provide their intended functionality
 
 ---
 ## F.a.q
