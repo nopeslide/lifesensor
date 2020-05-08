@@ -7,7 +7,7 @@ The [*LifeSensor*](https://lifesensor.org) project is an open-source, modular, l
 - This project is a collection of [*parts*](./parts/) and [*products*](./products/).
 - [*Parts*](./parts/) are components that provide a set of features.
 - [*Products*](./products/) are supported [*LifeSensor*](https://lifesensor.org) devices consisting of [*parts*](./parts/).
-- [*Parts*](./parts/) are subjects to requirements and constraints imposed by other [*parts*](./parts/) & [*products*](./products/)
+- [*Parts*](./parts/) are subjects to requirements and constraints imposed by [*products*](./products/) and other [*parts*](./parts/)
 
 ## Contributing
 Please see
