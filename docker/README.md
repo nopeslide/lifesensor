@@ -16,8 +16,6 @@ This directory contains Dockerfiles for the containers used in this project.
 <!-- LIST OF MAKEFILE TARGETS -->
 - `make help`
   - show Makefile options
-- `make all`
-  - build all images
 - `make build`
   - build all images
 - `make clean`
