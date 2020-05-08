@@ -20,15 +20,15 @@ This template should be used to create a new part version.
 - `make help`
   - show Makefile options
 - `make all`
-  - build & test all versions
+  - build & test everything
 - `make build`
-  - build all versions
+  - build everything
 - `make test`
-  - test all versions
+  - test everything
 - `make clean`
-  - clean all versions
+  - clean everything
 - `make distclean`
-  - distclean all version
+  - distclean everything
 
 ----
 ## [Code](./code/)
