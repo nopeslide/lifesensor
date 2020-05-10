@@ -9,7 +9,7 @@ This directory contains Dockerfiles for the containers used in this project.
 - [idf](./idf/)
   - idf framework for the esp32 firmware
 - [qemu](./qemu/)
-  - qemu for the xtensa architecture to simulate esp32
+  - qemu for architecture simulation
 
 ---
 ## Makefile
@@ -24,17 +24,8 @@ This directory contains Dockerfiles for the containers used in this project.
   - delete all all versions of all images
 
 ---
-## Building a single image
-1. change into the directory of the image
-2. run `make build`
-   - you may specify additional options, see `make help` for more information
-
-or
-1. run `make build-<IMAGE>`, where `<IMAGE>` is the image you want to build
-
----
 ## Run a container
-1. change into the directory of the image
+1. change into the version directory of the image
 2. run `make run`
    - you may specify additional options, see `make help` for more information
    - you may specify `EXEC` to run a single command
@@ -47,20 +38,6 @@ please copy and modify the [Template](./.template/)
 
 ---
 ## Structure
-
-```
-.
-├── <image name>        : mandatory unique name of the image
-│   ├── README.md  : mandatory general description of the image
-│   ├── <image version>
-│   ├── Dockerfile : mandatory Dockerfile to build the image
-│   ├── Makefile   : mandatory Makefile to work with the image
-│   └── ...
-│
-├── <image name>
-│   └── ...
-└── ...
-```
 ```
 .
 ├── README.md              : mandatory README.md you are currently reading
