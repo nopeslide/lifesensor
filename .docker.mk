@@ -1,44 +1,43 @@
 HELP := Build docker image & run docker container
 
+COMMIT := $(shell git rev-list --all --abbrev-commit -1 -- $(realpath $(firstword $(MAKEFILE_LIST))))
+ifndef COMMIT
+COMMIT := unknown
+$(warning COMMIT OF $(realpath $(firstword $(MAKEFILE_LIST))) UNDEFINED!)
+endif
+
+VERSION := $(shell basename $$(dirname $(realpath $(firstword $(MAKEFILE_LIST)))))
+ifndef VERSION
+VERSION := unknown
+$(warning VERSION OF $(realpath $(firstword $(MAKEFILE_LIST))) UNDEFINED!)
+endif
+
+NAME := $(shell basename $$(dirname $$(dirname $(realpath $(firstword $(MAKEFILE_LIST))))))
 ifndef NAME
-$(error No image name specified! (NAME))
+NAME := unknown
+$(error NAME OF $(realpath $(firstword $(MAKEFILE_LIST))) UNDEFINED!)
 endif
 
 VARIABLE_TOPIC        += DOCKER
-VARIABLE_TOPIC_DOCKER := DOCKER IMAGE OPTIONS
+VARIABLE_TOPIC_DOCKER := docker image options
 
-DOCKER       += IMAGE
-HELP_IMAGE   := docker name of image
-ifndef IMAGE
-IMAGE        := lifesensor/$(NAME)
-endif
+DOCKER += IMAGE
+IMAGE  := lifesensor/$(NAME)
 
-DOCKER       += FROM
-HELP_FROM    := dependency of this image
-
-DOCKER       += VERSION
-HELP_VERSION := version of image
-ifndef VERSION
-VERSION      := $(shell git rev-list --all --abbrev-commit -1 -- $(realpath $(firstword $(MAKEFILE_LIST))))
-endif
-ifndef VERSION
-VERSION      := latest
-endif
+DOCKER    += FROM
+HELP_FROM := dependency of this image
 
 VARIABLE_TOPIC      += ARGS
-VARIABLE_TOPIC_ARGS := DOCKER IMAGE ARGUMENTS
+VARIABLE_TOPIC_ARGS := docker image arguments
 
 VARIABLE_TOPIC              += DOCKER_BUILD
-VARIABLE_TOPIC_DOCKER_BUILD := DOCKER BUILD OPTIONS
-
-DOCKER_BUILD += TAG
-HELP_TAG     := additional version tag to set when building image
+VARIABLE_TOPIC_DOCKER_BUILD := docker build options
 
 DOCKER_BUILD += BUILD
 HELP_BUILD   := additional docker build options
 
 VARIABLE_TOPIC            += DOCKER_RUN
-VARIABLE_TOPIC_DOCKER_RUN := DOCKER RUN OPTIONS
+VARIABLE_TOPIC_DOCKER_RUN := docker run options
 
 DOCKER_RUN   += RUN
 HELP_RUN     := additional docker run options
@@ -69,7 +68,7 @@ TARGET_build    += build-from
 HELP_build-from := build image dependency
 build-from:
 ifdef FROM
-	make -C ../$(FROM) build
+	make -C ../../$(FROM) build
 endif
 
 .phony: build-image
@@ -79,11 +78,9 @@ build-image: build-from
 	docker build \
 		$(foreach ARG,$(ARGS),--build-arg=$(ARG)=$($(ARG)) ) \
 		$(BUILD) \
-		-t "$(IMAGE):$(VERSION)" \
+		-t "$(IMAGE)/$(VERSION):$(COMMIT)" \
 		.
-ifdef TAG
-	docker image tag "$(IMAGE):$(VERSION)" "$(IMAGE):$(TAG)"
-endif
+	docker image tag "$(IMAGE)/$(VERSION):$(COMMIT)" "$(IMAGE)/$(VERSION):latest"
 
 .phony: run
 TARGET   += run
@@ -116,6 +113,6 @@ TARGET_distclean     += distclean-image
 HELP_distclean-image := delete docker image
 distclean-image:
 	docker image rm -f $(IMAGE):$(VERSION)
-	docker image rm -f $(IMAGE):$(TAG)
+	docker image rm -f $(IMAGE):$(COMMIT)
 
 include $(shell git rev-parse --show-toplevel)/.common.mk

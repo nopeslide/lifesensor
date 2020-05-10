@@ -1,5 +1,5 @@
-<!-- Docker image <TITLE> -->
-# Docker image qemu
+<!-- Docker image <TITLE> (version <VERSION>)-->
+# Docker image qemu (version esp-develop)
 
 <!-- SHORT DESCRIPTION -->
 This is the qemu image used to simulate the esp32.
@@ -7,7 +7,7 @@ This is the qemu image used to simulate the esp32.
 ---
 ## Features
 <!-- LIST OF FEATURES -->
-- installs [qemu](https://github.com/espressif/qemu) & dependencies
+- installs xtensa-architecture capable [qemu](https://github.com/espressif/qemu) & dependencies
 
 ---
 ## Makefile

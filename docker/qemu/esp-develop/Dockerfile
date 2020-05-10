@@ -1,10 +1,11 @@
-FROM lifesensor/idf:latest
+FROM lifesensor/base/v1:latest
 
 RUN sudo -HE apt-get -y install \
 bison \
 curl \
 flex \
 gettext \
+git \
 libcairo2-dev \
 libffi-dev \
 libglib2.0-dev \

@@ -1,4 +1,5 @@
-FROM lifesensor/base:latest
+FROM lifesensor/base/v1:latest
+
 RUN sudo -HE apt-get -y install \
 bison \
 ccache \

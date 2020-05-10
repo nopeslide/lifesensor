@@ -1,5 +1,5 @@
-<!-- Docker image <TITLE> -->
-# Docker image base
+<!-- Docker image <TITLE> (version <VERSION>) -->
+# Docker image base (version v1)
 
 <!-- SHORT DESCRIPTION  -->
 This is the base image of all other images.

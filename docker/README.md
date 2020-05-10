@@ -17,11 +17,11 @@ This directory contains Dockerfiles for the containers used in this project.
 - `make help`
   - show Makefile options
 - `make build`
-  - build all images
+  - build all versions of all images
 - `make clean`
-  - delete all volumes
+  - delete all volumes of all versions of all images
 - `make distclean`
-  - delete all images
+  - delete all all versions of all images
 
 ---
 ## Building a single image
@@ -50,10 +50,36 @@ please copy and modify the [Template](./.template/)
 
 ```
 .
-├── <image name>   : mandatory unique name of the image
+├── <image name>        : mandatory unique name of the image
 │   ├── README.md  : mandatory general description of the image
+│   ├── <image version>
 │   ├── Dockerfile : mandatory Dockerfile to build the image
 │   ├── Makefile   : mandatory Makefile to work with the image
+│   └── ...
+│
+├── <image name>
+│   └── ...
+└── ...
+```
+```
+.
+├── README.md              : mandatory README.md you are currently reading
+├── Makefile               : mandatory Makefile executing targets in all subdirs
+│
+├── <image name>           : mandatory unique name of the image
+│   ├── README.md          : mandatory general description of the image
+│   │                        and elaboration of differences between version
+│   ├── Makefile           : mandatory Makefile executing targets in all subdirs
+│   │
+│   ├── <image version>    : mandatory unique image version
+│   │   ├── README.md      : mandatory version specific description of the image,
+│   │   │                    should list all features
+│   │   ├── Makefile       : mandatory Makefile for integration of the image
+│   │   ├── Dockerfile     : mandatory Dockerfile to build image
+│   │   └── ...
+│   │
+│   ├── <image version>
+│   │   └── ...
 │   └── ...
 │
 ├── <image name>

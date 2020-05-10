@@ -2,9 +2,13 @@
 FROM    := base/v1
 
 ### DOCKER IMAGE ARGUMENTS ###
-ARGS             += IDF_VERSION
-HELP_IDF_VERSION := idf version to use
-IDF_VERSION      := v4.0
+ARGS     += FOO
+HELP_FOO := modifies something
+FOO      := default_value
+
+ARGS     += BAR
+HELP_BAR := modifies something else
+BAR      := default_value
 
 ### DOCKER BUILD OPTIONS ###
 TAG     := latest
@@ -12,7 +16,7 @@ BUILD   := #empty
 
 ### DOCKER RUN OPTIONS ###
 RUN     := #empty
-VOLUMES += idf/v4.0/home:/home/developer:rw
+VOLUMES := #empty
 WORKDIR := $(shell pwd)
 ENVS    := #empty
 EXEC    := #empty

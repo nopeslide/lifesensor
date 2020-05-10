@@ -1,6 +1,5 @@
-### DOCKER IMAGE OPTIONS ###
-NAME    := qemu
-FROM    := idf
+### DOCKER IMAGE DEPENDENCY ###
+FROM    := base/v1
 
 ### DOCKER IMAGE ARGUMENTS ###
 ARGS              += QEMU_VERSION
@@ -13,7 +12,7 @@ BUILD   := #empty
 
 ### DOCKER RUN OPTIONS ###
 RUN     := #empty
-VOLUMES := qemu-home:/home/developer:rw
+VOLUMES := qemu/esp-develop/home:/home/developer:rw
 WORKDIR := $(shell pwd)
 ENVS    := #empty
 EXEC    := #empty

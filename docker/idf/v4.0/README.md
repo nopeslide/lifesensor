@@ -1,5 +1,5 @@
-<!-- Docker image <TITLE> -->
-# Docker image idf
+<!-- Docker image <TITLE> (version <VERSION>) -->
+# Docker image idf (version v4.0)
 
 <!-- SHORT DESCRIPTION -->
 This is the idf image used to build the esp32 firmware.
@@ -7,7 +7,7 @@ This is the idf image used to build the esp32 firmware.
 ---
 ## Features
 <!-- LIST OF FEATURES -->
-- installs [idf](https://github.com/espressif/esp-idf) & dependencies
+- installs [idf](https://github.com/espressif/esp-idf) version v4.0 & dependencies
 
 ---
 ## Makefile
@@ -24,12 +24,6 @@ This is the idf image used to build the esp32 firmware.
   - delete volumes
 - `make distclean`
   - delete image
-
-----
-## Image arguments
-<!-- LIST OF BUILD ARGUMENTS -->
-- `IDF_VERSION`
-  - idf version to use
 
 ---
 See the [Dockerfile](./Dockerfile) or [Makefile](./Makefile) for more information

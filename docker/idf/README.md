@@ -1,19 +1,13 @@
 <!-- Docker image <TITLE> -->
-# Docker image template
+# Docker image idf
 
 <!-- SHORT DESCRIPTION -->
-This template should be used to create a new image.
-1. Copy this template directory
-2. Give your new image a meaningful name.
-3. Append your new image to the image list in [../README.md](../README.md)
-4. Edit this README
-   - Change title!
-5. Continue editing in [v1/README.md](./1/README.md)
+This is the idf image used to build the esp32 firmware.
 
 ---
 ## Features
 <!-- LIST OF FEATURES -->
-- provides template for docker image
+- installs [idf](https://github.com/espressif/esp-idf) & dependencies
 
 ---
 ## Makefile
@@ -34,5 +28,5 @@ This template should be used to create a new image.
 <!-- PLEASE LIST ALL VERSIONS OF YOUR PART    -->
 <!-- INCLUDING A SHORT DESCRIPTION OF CHANGES -->
 <!-- LATEST VERSION SHOULD BE ON TOP!         -->
-- [v1](./v1/)
-  - initial version
+- [v4.0](./v4.0/)
+  - idf version v4.0
