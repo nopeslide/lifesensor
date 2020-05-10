@@ -1,4 +1,5 @@
-TARGET_all += build
-TARGET_all += test
+### PARTS OF THE PRODUCT ###
+PARTS += #empty
+PARTS += interconnect/v1
 
-include $(shell git rev-parse --show-toplevel)/.subdirs.mk
+include $(shell git rev-parse --show-toplevel)/.product.mk

@@ -1,4 +1,4 @@
-HELP := Build docker image & run docker container
+HELP := LifeSensor docker image & container
 
 COMMIT := $(shell git rev-list --all --abbrev-commit -1 -- $(realpath $(firstword $(MAKEFILE_LIST))))
 ifndef COMMIT

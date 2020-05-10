@@ -1,4 +1,4 @@
-HELP := Build & test lifesensor part
+HELP := LifeSensor part
 
 TARGET_all += build
 TARGET_all += test

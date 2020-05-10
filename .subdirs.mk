@@ -1,4 +1,4 @@
-HELP := Run Makefiles located in subdirectories.
+HELP ?= Run Makefiles located in subdirectories.
 
 VARIABLE += SUBDIRS
 HELP_SUBDIRS := directories to run make in
