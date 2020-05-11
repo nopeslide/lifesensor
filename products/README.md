@@ -1,5 +1,5 @@
 # LifeSensor products
-*Products* are supported [*LifeSensor*](https://lifesensor.org) devices consisting of [*parts*](./parts/).
+*Products* are supported [*LifeSensor*](https://lifesensor.org) devices consisting of [*parts*](../parts/).
 
 ---
 ## List of products
