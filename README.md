@@ -1,13 +1,29 @@
 # LifeSensor Project - health devices for all
 
-![lifesensor_logo.png](./docs/lifesensor_logo.png)
+<div style="text-align: center"><img src=./docs/lifesensor_logo.png></div>
 
 The [*LifeSensor*](https://lifesensor.org) project is an open-source, modular, low-cost bio sensing platform.
 
 - This project is a collection of [*parts*](./parts/) and [*products*](./products/).
 - [*Parts*](./parts/) are components that provide a set of features.
-- [*Products*](./products/) are supported [*LifeSensor*](https://lifesensor.org) devices consisting of [*parts*](./parts/).
-- [*Parts*](./parts/) are subjects to requirements and constraints imposed by [*products*](./products/) and other [*parts*](./parts/)
+- [*Products*](./products/) are [*LifeSensor*](https://lifesensor.org) devices consisting of [*parts*](./parts/).
+- [*Parts*](./parts/) are subjects to requirements and constraints imposed by [*products*](./products/) and other [*parts*](./parts/).
+
+---
+## Directories
+
+### [docker/](./docker/)
+- Docker images used by this project
+- Every used toolchain exists as docker image
+
+### [docs/](./docs/)
+- Documents regarding the whole project
+
+### [parts/](./parts/)
+- [*LifeSensor*](https://lifesensor.org) components used to build [*products*](./products/)
+
+### [products/](./products/)
+- [*LifeSensor*](https://lifesensor.org) devices consisting of [*parts*](./parts/)
 
 ---
 ## Makefile
@@ -15,15 +31,15 @@ The [*LifeSensor*](https://lifesensor.org) project is an open-source, modular, l
 - `make help`
   - show Makefile options
 - `make all`
-  - build & test everything
+  - build & test all components
 - `make build`
-  - build everything
+  - build all components
 - `make test`
-  - test everything
+  - test all components
 - `make clean`
-  - clean everything
+  - clean all components
 - `make distclean`
-  - distclean everything
+  - distclean all components
 
 ---
 ## Contributing

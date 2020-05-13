@@ -2,36 +2,16 @@
 *Products* are supported [*LifeSensor*](https://lifesensor.org) devices consisting of [*parts*](../parts/).
 
 ---
-## List of products
-- [prototype](./prototype/)
+## Products
+- [prototype/](./prototype/)
   - prototype & testing ground of various parts
 
 ---
-## Makefile
-<!-- LIST OF MAKEFILE TARGETS -->
-- `make help`
-  - show Makefile options
-- `make all`
-  - build & test all products
-- `make build`
-  - build all products
-- `make test`
-  - test all products
-- `make clean`
-  - clean all products
-- `make distclean`
-  - distclean all products
-
----
-## Adding new products
-- If you want to add a new product,
-please copy the [*template product*](./.template/) and modify your copy.
-
----
-## Structure
+## Products structure
 
 ```
-.
+lifesensor/products
+│
 ├── README.md              : mandatory README.md you are currently reading
 ├── Makefile               : mandatory Makefile executing targets in all subdirs
 │
@@ -63,6 +43,27 @@ please copy the [*template product*](./.template/) and modify your copy.
 │   └── ...
 └── ...
 ```
+
+---
+## Makefile
+<!-- LIST OF MAKEFILE TARGETS -->
+- `make help`
+  - show Makefile options
+- `make all`
+  - build & test all products
+- `make build`
+  - build all products
+- `make test`
+  - test all products
+- `make clean`
+  - clean all products
+- `make distclean`
+  - distclean all products
+
+---
+## Adding new products
+- If you want to add a new product,
+please copy the [*template product*](./.template/) and modify your copy.
 
 ---
 ## Rules

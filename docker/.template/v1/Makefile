@@ -22,4 +22,4 @@ ENVS    := #empty
 EXEC    := #empty
 MOUNT   := $(shell pwd)
 
-include $(shell git rev-parse --show-toplevel)/.docker.mk
+include $(shell git rev-parse --show-toplevel)/.make/docker.mk

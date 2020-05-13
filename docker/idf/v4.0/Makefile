@@ -1,5 +1,4 @@
-### DOCKER IMAGE DEPENDENCY ###
-FROM    := base/v1
+DEPENDS := ../../base/v1
 
 ### DOCKER IMAGE ARGUMENTS ###
 ARGS             += IDF_VERSION
@@ -12,10 +11,10 @@ BUILD   := #empty
 
 ### DOCKER RUN OPTIONS ###
 RUN     := #empty
-VOLUMES += idf/v4.0/home:/home/developer:rw
+VOLUMES += idf-v4.0-home:/home/developer:rw
 WORKDIR := $(shell pwd)
 ENVS    := #empty
 EXEC    := #empty
 MOUNT   := $(shell pwd)
 
-include $(shell git rev-parse --show-toplevel)/.docker.mk
+include $(shell git rev-parse --show-toplevel)/.make/docker.mk

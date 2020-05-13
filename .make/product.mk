@@ -20,7 +20,7 @@ test-requirements:
 
 .phony: clean-requirements
 TARGET_clean += clean-requirements
-HELP_clean-requirements := clean if requirements are fullfilled
+HELP_clean-requirements := clean generated requirement files
 clean-requirements:
 	#todo
 
@@ -34,4 +34,4 @@ endef
 
 $(foreach TARGET, build test clean distclean, $(eval $(call PART_TEMPLATE,$(TARGET))))
 
-include $(shell git rev-parse --show-toplevel)/.common.mk
+include $(shell git rev-parse --show-toplevel)/.make/common.mk

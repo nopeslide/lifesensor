@@ -1,1 +1,1 @@
-include $(shell git rev-parse --show-toplevel)/.subdirs.mk
+include $(shell git rev-parse --show-toplevel)/.make/subdirs.mk

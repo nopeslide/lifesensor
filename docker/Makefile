@@ -1,1 +1,2 @@
-include $(shell git rev-parse --show-toplevel)/.subdirs.mk
+DEPENDS := $(shell dirname $(wildcard */Makefile))
+include $(shell git rev-parse --show-toplevel)/.make/common.mk

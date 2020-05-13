@@ -6,7 +6,7 @@ This is the base image of all other images.
 
 ## Features
 <!-- LIST OF FEATURES -->
-- installs `sudo`
+- installs `sudo`, `make`, `git`
 - creates user `developer`
 - adds `developer` to sudoers
 
