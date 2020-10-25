@@ -8,7 +8,11 @@ VARIABLES_MAKEFILE += DEPENDS
 HELP_DEPENDS       ?= dependencies that should be run prior to this Makefile
 
 VARIABLES_MAKEFILE += DOCKER
-HELP_DOCKER        := docker image to use for 'docker'/'docker-*' targets
+HELP_DOCKER        := run inside docker
+DOCKER             ?= 0
+export DOCKER
+VARIABLES_MAKEFILE += DOCKER_IMAGE
+HELP_DOCKER_IMAGE  := docker image to use for targets
 
 TARGETS_common += all
 TARGETS_common += build
@@ -23,7 +27,7 @@ define TEMPLATE_DEPEND_TARGET
 TARGETS_$2 := $3 $(TARGETS_$2)
 HELP_$3 := run 'make -C $1 $4'
 $3:
-	make -C $1 $4
+	$(MAKE) -C $1 $4
 endef
 
 $(foreach \
@@ -33,23 +37,6 @@ $(foreach \
 		TARGET, \
 		$(TARGETS_common), \
 		$(eval $(call TEMPLATE_DEPEND_TARGET,$(SUBDIR),$(TARGET),$(TARGET)-$(SUBDIR),$(TARGET))) \
-	) \
-)
-
-define TEMPLATE_DEPEND_DOCKER_TARGET
-.phony: $2
-$2:
-	make -C $1 $3
-$3:$2
-endef
-
-$(foreach \
-	SUBDIR, \
-	$(DEPENDS), \
-	$(foreach \
-		TARGET, \
-		$(TARGETS_common), \
-		$(eval $(call TEMPLATE_DEPEND_DOCKER_TARGET,$(SUBDIR),docker-$(SUBDIR)-$(TARGET),docker-$(TARGET))) \
 	) \
 )
 
@@ -68,28 +55,26 @@ $(foreach \
 )
 
 .PHONY: docker
-ifdef DOCKER
+ifdef DOCKER_IMAGE
 TARGETS     += docker
 HELP_docker := enter docker container
 docker:
-	$(MAKE) -C $(shell git rev-parse --show-toplevel)/docker/$(DOCKER) run \
+	$(MAKE) -C $(shell git rev-parse --show-toplevel)/docker/$(DOCKER_IMAGE) run \
 	WORKDIR=$(shell pwd) \
 	MOUNT=$(shell git rev-parse --show-toplevel)
 else
 docker: ;
 endif
 
-TARGETS       += docker-*
-HELP_docker-* := execute '*' in docker container
-
-ifdef DOCKER
-docker-%:
-	$(MAKE) -C $(shell git rev-parse --show-toplevel)/docker/$(DOCKER) run \
+ifeq ($(DOCKER),1)
+ifdef DOCKER_IMAGE
+unexport DOCKER
+$(MAKECMDGOALS):
+	$(MAKE) -C $(shell git rev-parse --show-toplevel)/docker/$(DOCKER_IMAGE) run \
 	WORKDIR=$(shell pwd) \
 	MOUNT=$(shell git rev-parse --show-toplevel) \
-	EXEC="make -C $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST)))) $(@:docker-%=%) DEPENDS="
-else
-docker-%: %;
+	EXEC="make -C $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST)))) $@ DEPENDS="
+endif
 endif
 
 TARGETS := $(TARGETS_common) $(TARGETS)
