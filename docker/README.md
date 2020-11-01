@@ -63,6 +63,8 @@ please copy and modify the [Template](./.template/)
 └── ...
 ```
 
+---
+## Rules
 - *Docker images* of the LifeSensor project should have a dedicated directory here.
 - *Docker images* can be based on each other (see [base](./base/) image).
 - *Docker images* may compete for the same functionality.
