@@ -1,6 +1,6 @@
 # LifeSensor Project - health devices for all
 
-<div style="text-align: center"><img src=./docs/lifesensor_logo.png></div>
+![LifeSensor logo](./docs/lifesensor_logo.png)
 
 The [*LifeSensor*](https://lifesensor.org) project is an open-source, modular, low-cost bio sensing platform.
 
